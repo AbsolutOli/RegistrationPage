@@ -1,2 +1,216 @@
 @import 'nullstyle.scss';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@400;500&display=swap');
+
+body {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+.account {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+
+    &__left-side {
+        font-family: 'Manrope';
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3125rem;
+        justify-content: flex-end;
+        position: relative;
+        flex: 0 1 49.444444444%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url(../img/left-side/backimg.jpg) center / cover no-repeat;
+        }
+
+        &::before {
+            transform: translate(-100%, 0px);
+        }
+    }
+
+    &__left-side,
+    &__content {
+        padding: 4.75rem 4.16666666667%;
+    }
+
+    &__title,
+    &__text {
+        position: relative;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.15;
+        max-width: 19.3125rem;
+    }
+
+    &__text {
+        line-height: 1.2;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+    }
+
+    &__inset {
+        max-width: 59.065934065%;
+        margin: 0 auto;
+        min-height: 100%;
+        display: flex;
+        gap: 3.125rem;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 26.875rem;
+    }
+
+    &__logo {
+        font-family: 'Manrope';
+        color: #1D1D1B;
+        font-weight: 600;
+        line-height: 1.2;
+        padding-left: 2rem;
+        background: url(../img/content/logo.svg) left / 1.5rem no-repeat;
+    }
+
+    &__form {}
+
+    &__login {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    &__link-login {
+        font-weight: 500;
+        text-decoration: underline;
+        color: #000;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.form {
+
+    &__title {
+        color: #000;
+        font-family: 'Manrope';
+        font-size: 2.25rem;
+        font-weight: 800;
+        line-height: 1.2;
+
+        &:not(:last-child) {
+            margin-bottom: 0.3125rem;
+        }
+    }
+
+    &__text {
+        color: #000;
+        line-height: 1.2;
+    }
+
+    &__items {
+        display: grid;
+        gap: 0.9375rem;
+        padding: 1.875rem 0;
+    }
+
+    &__input {
+        height: 3rem;
+        border-bottom: 1px solid #E0E0E0;
+        transition: border-bottom 0.8s ease 0s, padding-left 0.3s ease 0s;
+
+        &:focus {
+            padding-left: 0.9375rem;
+        }
+
+        &:hover {
+            border-bottom: 1px solid #000;
+        }
+
+        &::placeholder {
+            color: #000;
+            transition: opacity 0.3s ease 0s;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+    }
+
+    &__actions {
+        display: grid;
+        gap: 1.625rem;
+    }
+
+    &__button {
+        border-radius: 0.375rem;
+        background-color: #060606;
+        padding: 1.25rem 0.9375rem;
+        color: #FFF;
+        transition: background-color 0.3s ease 0s;
+
+        &:hover {
+            background-color: #333;
+        }
+    }
+
+    &__or {
+        color: #7A7A7A;
+        line-height: 1.2;
+        position: relative;
+        text-align: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.0625rem;
+            top: 50%;
+            left: 0;
+            background-color: #E0E0E0;
+        }
+
+        span {
+            background-color: #fff;
+            position: relative;
+            padding: 0 0.3125rem;
+        }
+    }
+
+    &__google {
+        border-radius: 0.375rem;
+        border: 0.0625rem solid #D9D9D9;
+        padding: 1.25rem 0.9375rem;
+        text-align: center;
+        transition: border 0.3s ease 0s;
+
+        &:hover {
+            border: 0.0625rem solid #000;
+        }
+
+        span {
+            text-align: left;
+            background: url(../img/content/googlelogo.svg) left / 1.5rem no-repeat;
+            padding-left: 2.5rem;
+            line-height: 1.2;
+            color: #000;
+        }
+    }
+}

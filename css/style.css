@@ -108,6 +108,11 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 64.375rem) {
+  .account {
+    display: block;
+  }
+}
 .account__left-side {
   font-family: "Manrope";
   color: #FFF;
@@ -138,6 +143,11 @@ body {
 }
 .account__left-side, .account__content {
   padding: 4.75rem 4.1666666667%;
+}
+@media (max-width: 64.375rem) {
+  .account__left-side, .account__content {
+    padding: 2.75rem 5.1666666667%;
+  }
 }
 .account__title, .account__text {
   position: relative;
@@ -172,6 +182,13 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 26.875rem;
+}
+@media (max-width: 64.375rem) {
+  .account__inset {
+    gap: 2.125rem;
+    min-width: 0;
+    max-width: none;
+  }
 }
 .account__logo {
   font-family: "Manrope";
@@ -326,6 +343,12 @@ body {
 .account__left-side::before {
   -webkit-transform: translate(-100%, 0px);
           transform: translate(-100%, 0px);
+}
+@media (max-width: 64.375rem) {
+  .account__left-side::before {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
 }
 
 .loaded .account__left-side::before {

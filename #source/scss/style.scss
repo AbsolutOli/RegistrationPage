@@ -17,6 +17,10 @@ body {
     position: relative;
     display: flex;
 
+    @media (max-width: 64.375rem) {
+        display: block;
+    }
+
     &__left-side {
         font-family: 'Manrope';
         color: #FFF;
@@ -42,6 +46,10 @@ body {
     &__left-side,
     &__content {
         padding: 4.75rem 4.16666666667%;
+
+        @media (max-width: 64.375rem) {
+            padding: 2.75rem 5.16666666667%;
+        }
     }
 
     &__title,
@@ -73,6 +81,12 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-width: 26.875rem;
+
+        @media (max-width: 64.375rem) {
+            gap: 2.125rem;
+            min-width: 0;
+            max-width: none;
+        }
     }
 
     &__logo {
@@ -216,6 +230,10 @@ body {
 
 .account__left-side::before {
     transform: translate(-100%, 0px);
+
+    @media (max-width: 64.375rem) {
+        transform: translate(0px, 0px);
+    }
 }
 
 .loaded .account__left-side::before {

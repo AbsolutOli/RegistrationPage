@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create account</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <main class="account">
-            <div class="account__left-side">
-                <h1 class="account__title">Turn your ideas into reality</h1>
-                <p class="account__text">Start for free and get attractive offers from the community</p>
-            </div>
-            <div class="account__content">
-                <div class="account__inset">
-                    <a href="" class="account__logo">Interactive Brand</a>
-                    <form action="#" method="post" class="account__form form">
-                        <div class="form__title">Create an account</div>
-                        <p class="form__text">Let’s get started with your 30day free trial.</p>
-                        <div class="form__items">
-                            <input type="text" name="username" placeholder="Username" class="form__input">
-                            <input type="email" name="email" placeholder="Email" class="form__input">
-                            <input type="password" name="password" placeholder="Password" class="form__input">
-                        </div>
-                        <div class="form__actions">
-                            <button type="submit" class="form__button">Create account</button>
-                            <div class="form__or"><span>or</span></div>
-                            <a href="" class="form__google"><span>Sign up with Google</span></a>
-                        </div>
-                    </form>
-                    <div class="account__login">
-                        Already have an account?
-                        <a href="" class="account__link-login">Log in</a>
-                    </div>
+      <main class="account">
+        <div class="account__left-side">
+          <h1 class="account__title">Turn your ideas into reality</h1>
+          <p class="account__text">
+            Start for free and get attractive offers from the community
+          </p>
+        </div>
+        <div class="account__content">
+          <div class="account__inset">
+            <a href="" class="account__logo">Interactive Brand</a>
+            <form action="#" method="post" class="account__form form">
+              <div class="form__title">Create an account</div>
+              <p class="form__text">
+                Let’s get started with your 30day free trial.
+              </p>
+              <div class="form__items" style="position: relative; z-index: 100">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  class="form__input"
+                />
+                <div class="input-wrapper">
+                  <input
+                    id="email"
+                    type="email"
+                    autocomplete="new-password"
+                    class="form__input"
+                    name="email"
+                    placeholder="Email"
+                  />
+                  <ul id="suggestionList" class="suggestion-list"></ul>
                 </div>
+                <p
+                  id="suggestedText"
+                  class="suggested-text mt-5"
+                  style="display: none"
+                >
+                  Maybe you meant:
+                  <button
+                    type="button"
+                    id="suggestedEmailBtn"
+                    class="pick_suggested"
+                  ></button>
+                  ?
+                </p>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form__input"
+                />
+              </div>
+              <div class="form__actions">
+                <button type="submit" class="form__button">
+                  Create account
+                </button>
+                <div class="form__or"><span>or</span></div>
+                <a href="" class="form__google"
+                  ><span>Sign up with Google</span></a
+                >
+              </div>
+            </form>
+            <div class="account__login">
+              Already have an account?
+              <a href="" class="account__link-login">Log in</a>
             </div>
-        </main>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
